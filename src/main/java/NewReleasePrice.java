@@ -1,4 +1,5 @@
 public class NewReleasePrice implements Price {
+
     public double getAmount(int daysRented) {
         return daysRented * 3;
     }

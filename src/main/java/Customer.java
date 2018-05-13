@@ -5,6 +5,7 @@ import java.util.*;
 class Customer {
     private final String name;
     private final ArrayList<Rental> rentals = new ArrayList<Rental>();
+
     Customer(String name){
         this.name = name;
     }
@@ -36,6 +37,7 @@ class Customer {
                 .append(" frequent renter points");
         return result.toString();
     }
+
     private double getTotalCharge() {
         double result = 0;
         for (Rental rental: rentals) {
@@ -43,6 +45,7 @@ class Customer {
         }
         return result;
     }
+
     private int getTotalFrequentRenterPoints() {
         int result = 0;
         for (Rental rental: rentals) {
