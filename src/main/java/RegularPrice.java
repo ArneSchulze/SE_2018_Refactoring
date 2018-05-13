@@ -1,4 +1,4 @@
-public class RegularPrice implements Price {
+class RegularPrice implements Price {
 
     public double getAmount(int daysRented) {
         if(daysRented > 2) {

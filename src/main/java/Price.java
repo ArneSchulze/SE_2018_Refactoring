@@ -1,4 +1,4 @@
-public interface Price {
+interface Price {
 
     double getAmount(int daysRented);
 

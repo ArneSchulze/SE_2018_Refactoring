@@ -1,4 +1,4 @@
-public class ChildrenPrice implements Price {
+class ChildrenPrice implements Price {
 
     public double getAmount(int daysRented) {
         if(daysRented > 3) {
