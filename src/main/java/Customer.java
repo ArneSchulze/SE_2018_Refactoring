@@ -13,7 +13,7 @@ class Customer {
         rentals.add(rental);
     }
 
-    public String getName (){
+    private String getName(){
         return name;
     }
 
@@ -40,14 +40,14 @@ class Customer {
                 .append(" frequent renter points");
         return result.toString();
     }
-    public double getTotalCharge() {
+    private double getTotalCharge() {
         double result = 0;
         for (Rental rental: rentals) {
             result += rental.getAmount();
         }
         return result;
     }
-    public int getTotalFrequentRenterPoints() {
+    private int getTotalFrequentRenterPoints() {
         int result = 0;
         for (Rental rental: rentals) {
             result += rental.getFrequentRenterPoints();
