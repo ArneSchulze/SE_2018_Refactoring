@@ -5,7 +5,7 @@ class CustomerTest {
 
     @Test
     void testStatements() {
-        Movie testMovie = new Movie("testTitle", Movie.NEW_RELEASE);
+        Movie testMovie = new Movie("testTitle", PriceCode.NEW_RELEASE);
         int testDaysRented = 2;
         Rental testRental = new Rental(testMovie, testDaysRented);
 
@@ -21,7 +21,7 @@ class CustomerTest {
 
         assertEquals(expected1, testCustomer.statement());
 
-        Movie testMovie2 = new Movie("testTitle", Movie.NEW_RELEASE);
+        Movie testMovie2 = new Movie("testTitle", PriceCode.NEW_RELEASE);
         int testDaysRented1 = -1;
         Rental testRental2 = new Rental(testMovie2, testDaysRented1);
 
