@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class PriceTest {
+class PriceTest {
 
     @Test
     void testGetRegularCharge() {

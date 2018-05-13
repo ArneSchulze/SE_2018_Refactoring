@@ -1,35 +1,35 @@
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.function.Executable;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class CustomerTest {
 
     @Test
     void testStatements() {
-        Movie testMovie = new Movie("testTitle", new NewReleasePrice());
-        int testDaysRented = 2;
-        Rental testRental = new Rental(testMovie, testDaysRented);
+        final Movie movie = new Movie("testTitle", new NewReleasePrice());
+        final int daysRented = 1;
+        final Rental rental = new Rental(movie, daysRented);
 
-        Customer testCustomer = new Customer("testCustomer");
-        testCustomer.addRental(testRental);
+        final Customer customer1 = new Customer("test");
+        customer1.addRental(rental);
 
-        String expected = "Rental Record for testCustomer\n\tTitle\t\tDays\tAmount\n\ttestTitle\t\t2\t6.0\nAmount owed is 6.0\nYou earned 2 frequent renter points";
-        assertEquals(expected, testCustomer.statement());
+        String expected1 = "Rental Record for test\n\tTitle\t\tDays\tAmount\n\ttestTitle\t\t1\t3.0\nAmount owed is 3.0\nYou earned 1 frequent renter points";
+        assertEquals(expected1, customer1.statement());
 
-        Rental testRental1 = new Rental(testMovie, testDaysRented);
-        testCustomer.addRental(testRental1);
-        String expected1 = "Rental Record for testCustomer\n\tTitle\t\tDays\tAmount\n\ttestTitle\t\t2\t6.0\n\ttestTitle\t\t2\t6.0\nAmount owed is 12.0\nYou earned 4 frequent renter points";
+        final Customer customer2 = new Customer("test");
 
-        assertEquals(expected1, testCustomer.statement());
+        String expected2 = "Rental Record for test\n\tTitle\t\tDays\tAmount\nAmount owed is 0.0\nYou earned 0 frequent renter points";
 
-        Movie testMovie2 = new Movie("testTitle", new NewReleasePrice());
-        int testDaysRented1 = -1;
-        Rental testRental2 = new Rental(testMovie2, testDaysRented1);
+        assertEquals(expected2, customer2.statement());
 
-        Customer testCustomer1 = new Customer("testCustomer");
-        testCustomer1.addRental(testRental2);
+        final Customer customer3 = new Customer("test");
+        customer3.addRental(null);
 
-        String expected2 = "Rental Record for testCustomer\n\tTitle\t\tDays\tAmount\n\ttestTitle\t\t-1\t-3.0\nAmount owed is -3.0\nYou earned 1 frequent renter points";
-
-        assertEquals(expected2, testCustomer1.statement());
+        assertThrows(NullPointerException.class, new Executable() {
+            public void execute() throws Throwable {
+                customer3.statement();
+            }
+        });
     }
 }
