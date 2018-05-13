@@ -5,8 +5,16 @@
     <groupId>se.fowler.refactoring</groupId>
     <artifactId>refactoring</artifactId>
     <version>1.0</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.2.0</version>
+        </dependency>
+    </dependencies>
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>
+        <testSourceDirectory>src/test/java</testSourceDirectory>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
