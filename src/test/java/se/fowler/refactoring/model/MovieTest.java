@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class MovieTest {
 
     @Test
-    void testGetAmount() {
+    protected void testGetAmount() {
         final Price price = new RegularPrice();
         final Movie movie1 = new Movie("testTitle", price);
         final int daysRented = 2;
@@ -25,7 +25,7 @@ class MovieTest {
     }
 
     @Test
-    void testGetFrequentRenterPoints() {
+    protected void testGetFrequentRenterPoints() {
         final Price price = new RegularPrice();
         final Movie movie1 = new Movie("testTitle", price);
         final int daysRented = 2;
@@ -42,7 +42,7 @@ class MovieTest {
     }
 
     @Test
-    void testMovieInstantiation() {
+    protected void testMovieInstantiation() {
         final String title = "test";
         final Price price = new RegularPrice();
         final Movie movie1 = new Movie(title, price);

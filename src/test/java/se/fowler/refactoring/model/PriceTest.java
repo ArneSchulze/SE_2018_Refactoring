@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class PriceTest {
 
     @Test
-    void testGetRegularCharge() {
+    protected void testGetRegularCharge() {
         Price price = new RegularPrice();
 
         double expected1 = 2;
@@ -22,7 +22,7 @@ class PriceTest {
     }
 
     @Test
-    void testChildrenCharge() {
+    protected void testChildrenCharge() {
         Price price = new ChildrenPrice();
 
         double expected1 = 1.5;
@@ -37,7 +37,7 @@ class PriceTest {
     }
 
     @Test
-    void testNewReleasePrice() {
+    protected void testNewReleasePrice() {
         Price price = new NewReleasePrice();
 
         double expected1 = 3;
@@ -54,7 +54,7 @@ class PriceTest {
     }
 
     @Test
-    void testFrequentRenterPoints() {
+    protected void testFrequentRenterPoints() {
         Price regular = new RegularPrice();
         Price children = new ChildrenPrice();
         Price newRelease = new NewReleasePrice();

@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CustomerTest {
 
     @Test
-    void testStatements() {
+    protected void testStatements() {
         final Movie movie = new Movie("testTitle", new NewReleasePrice());
         final int daysRented = 1;
         final Rental rental = new Rental(movie, daysRented);
