@@ -61,3 +61,5 @@ fabric.properties
 hs_err_pid*
 # Created by .ignore support plugin (hsz.mobi)
 .idea/SE_2018_Refactoring.iml
+
+target
