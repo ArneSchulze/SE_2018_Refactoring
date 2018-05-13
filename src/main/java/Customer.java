@@ -7,13 +7,16 @@ class Customer {
     private ArrayList<Rental> rentals = new ArrayList<Rental>();
     public Customer (String name){
         this.name = name;
-    };
+    }
+
     public void addRental(Rental rental) {
         rentals.add(rental);
-    };
+    }
+
     public String getName (){
         return name;
-    };
+    }
+
     public String statement() {
         StringBuilder result = new StringBuilder("Rental Record for " + this.getName() + "\n");
         result.append("\tTitle\t\tDays\tAmount\n");

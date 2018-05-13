@@ -13,7 +13,8 @@ public class Movie {
     }
     public String getTitle (){
         return title;
-    };
+    }
+
     public double getAmount(int daysRented) {
         return price.getAmount(daysRented);
     }
