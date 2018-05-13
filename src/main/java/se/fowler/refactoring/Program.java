@@ -1,4 +1,6 @@
-import java.lang.*;
+package se.fowler.refactoring;
+
+import se.fowler.refactoring.model.*;
 
 /**
  * Note that Java console applications need to be run through the java runtime
@@ -15,7 +17,7 @@ class Program
     public static void main(String args[]) 
     {
         String result;
-        System.out.println("Welcome to the Movie Store");
+        System.out.println("Welcome to the se.fowler.refactoring.model.Movie Store");
         Movie m1 = new Movie("movie1", new ChildrenPrice());
         Movie m2 = new Movie("movie2",new NewReleasePrice());
         Rental r1 = new Rental(m1, 10);

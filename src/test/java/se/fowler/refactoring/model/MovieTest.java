@@ -1,3 +1,5 @@
+package se.fowler.refactoring.model;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 

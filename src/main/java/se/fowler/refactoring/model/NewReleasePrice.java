@@ -1,4 +1,6 @@
-class NewReleasePrice implements Price {
+package se.fowler.refactoring.model;
+
+public class NewReleasePrice implements Price {
 
     public double getAmount(int daysRented) {
         return daysRented * 3;

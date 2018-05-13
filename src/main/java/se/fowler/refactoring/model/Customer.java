@@ -1,21 +1,21 @@
+package se.fowler.refactoring.model;
 
-import java.lang.*;
-import java.util.*;
+import java.util.ArrayList;
 
-class Customer {
+public class Customer {
     private final String name;
     private final ArrayList<Rental> rentals = new ArrayList<Rental>();
 
-    Customer(String name){
+    public Customer(String name){
         this.name = name;
     }
 
-    void addRental(Rental rental) {
+    public void addRental(Rental rental) {
         rentals.add(rental);
     }
 
-    String statement() {
-        StringBuilder result = new StringBuilder("Rental Record for " + name + "\n");
+    public String statement() {
+        StringBuilder result = new StringBuilder("se.fowler.refactoring.model.Rental Record for " + name + "\n");
         result.append("\tTitle\t\tDays\tAmount\n");
 
         for (Rental rental: rentals) {

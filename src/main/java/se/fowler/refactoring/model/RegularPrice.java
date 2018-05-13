@@ -1,4 +1,6 @@
-class RegularPrice implements Price {
+package se.fowler.refactoring.model;
+
+public class RegularPrice implements Price {
 
     public double getAmount(int daysRented) {
         if(daysRented > 2) {

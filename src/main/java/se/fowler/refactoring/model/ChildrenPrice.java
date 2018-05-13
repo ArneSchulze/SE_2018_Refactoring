@@ -1,4 +1,6 @@
-class ChildrenPrice implements Price {
+package se.fowler.refactoring.model;
+
+public class ChildrenPrice implements Price {
 
     public double getAmount(int daysRented) {
         if(daysRented > 3) {

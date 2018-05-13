@@ -1,29 +1,31 @@
-class Movie {
+package se.fowler.refactoring.model;
+
+public class Movie {
     private final String title;
     private Price price;
 
-    Movie(String title, Price price) {
+    public Movie(String title, Price price) {
         this.title = title;
         this.price = price;
     }
 
-    Price getPrice() {
+    protected Price getPrice() {
         return price;
     }
 
-    void setPrice(Price newPrice) {
+    protected void setPrice(Price newPrice) {
         price = newPrice;
     }
 
-    String getTitle(){
+    protected String getTitle(){
         return title;
     }
 
-    double getAmount(int daysRented) {
+    protected double getAmount(int daysRented) {
         return price.getAmount(daysRented);
     }
 
-    int getFrequentRenterPoints(int daysRented) {
+    protected int getFrequentRenterPoints(int daysRented) {
         return price.getFrequentRenterPoints(daysRented);
     }
 }
