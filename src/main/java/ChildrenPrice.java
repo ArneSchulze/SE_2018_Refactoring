@@ -1,4 +1,4 @@
-public class ChildrensPrice implements Price {
+public class ChildrenPrice implements Price {
     public double getAmount(int daysRented) {
         if(daysRented > 3) {
             return (daysRented - 2) * 1.5;
