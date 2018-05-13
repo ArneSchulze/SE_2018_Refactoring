@@ -3,8 +3,8 @@ import java.lang.*;
 import java.util.*;
 
 class Customer {
-    private String name;
-    private ArrayList<Rental> rentals = new ArrayList<Rental>();
+    private final String name;
+    private final ArrayList<Rental> rentals = new ArrayList<Rental>();
     public Customer (String name){
         this.name = name;
     }

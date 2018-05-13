@@ -1,5 +1,5 @@
 public class Movie {
-    private String title;
+    private final String title;
     private Price price;
     public Movie(String title, Price price) {
         this.title = title;
