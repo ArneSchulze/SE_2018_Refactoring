@@ -5,8 +5,8 @@ import java.util.*;
 class Customer {
     private String name;
     private ArrayList<Rental> rentals = new ArrayList<Rental>();
-    public Customer (String newname){
-        name = newname;
+    public Customer (String name){
+        this.name = name;
     };
     public void addRental(Rental rental) {
         rentals.add(rental);
