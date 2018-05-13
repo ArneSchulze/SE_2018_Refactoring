@@ -5,20 +5,16 @@ import java.util.*;
 class Customer {
     private final String name;
     private final ArrayList<Rental> rentals = new ArrayList<Rental>();
-    public Customer (String name){
+    Customer(String name){
         this.name = name;
     }
 
-    public void addRental(Rental rental) {
+    void addRental(Rental rental) {
         rentals.add(rental);
     }
 
-    private String getName(){
-        return name;
-    }
-
-    public String statement() {
-        StringBuilder result = new StringBuilder("Rental Record for " + this.getName() + "\n");
+    String statement() {
+        StringBuilder result = new StringBuilder("Rental Record for " + name + "\n");
         result.append("\tTitle\t\tDays\tAmount\n");
 
         for (Rental rental: rentals) {

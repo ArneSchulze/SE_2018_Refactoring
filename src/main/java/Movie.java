@@ -1,24 +1,24 @@
-public class Movie {
+class Movie {
     private final String title;
     private Price price;
-    public Movie(String title, Price price) {
+    Movie(String title, Price price) {
         this.title = title;
         this.price = price;
     }
-    public Price getPrice() {
+    Price getPrice() {
         return price;
     }
-    public void setPrice(Price newPrice) {
+    void setPrice(Price newPrice) {
         price = newPrice;
     }
-    public String getTitle (){
+    String getTitle(){
         return title;
     }
 
-    public double getAmount(int daysRented) {
+    double getAmount(int daysRented) {
         return price.getAmount(daysRented);
     }
-    public int getFrequentRenterPoints(int daysRented) {
+    int getFrequentRenterPoints(int daysRented) {
         return price.getFrequentRenterPoints(daysRented);
     }
 }
